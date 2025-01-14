@@ -1,5 +1,5 @@
-
-export default {
+const browseDress =
+{
     name: 'browseDress',
     type: 'document',
     title: 'Dress',
@@ -16,3 +16,4 @@ export default {
 },
 ]};
   
+export default browseDress 

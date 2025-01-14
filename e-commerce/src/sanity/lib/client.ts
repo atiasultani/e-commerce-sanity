@@ -1,4 +1,3 @@
-import env from "@sanity/schema"
 import { createClient } from '@sanity/client';
 
 export const client = createClient({

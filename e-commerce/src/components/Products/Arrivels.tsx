@@ -3,7 +3,16 @@ import { client } from '@/sanity/lib/client'; // Adjust the path based on your f
 import { urlFor } from '@/sanity/lib/image';
 import Image from 'next/image';
 
-const getArrivelsData = async () => {
+// Define a TypeScript interface for the product data
+interface Product {
+  _id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+}
+
+// Fetch the data with proper typing
+const getArrivelsData = async (): Promise<Product[]> => {
   const response = await client.fetch(
     `*[_type == "product"]{
       _id,
@@ -22,7 +31,7 @@ const Arrivels = async () => {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-2xl font-bold text-center mb-6">New Arrivals</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products.map((product: any) => (
+        {products.map((product: Product) => (
           <div
             key={product._id}
             className="border rounded-lg p-4 flex flex-col items-center bg-white shadow hover:shadow-lg transition-shadow"

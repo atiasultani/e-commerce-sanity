@@ -1,4 +1,4 @@
-export default {
+const mainCove={
   name: 'mainCover',
   type: 'document',
   title: 'MainCover',
@@ -27,3 +27,4 @@ export default {
     }
   ],
 };
+export default mainCove

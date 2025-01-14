@@ -1,4 +1,4 @@
-export default {
+const topSelling={
     name: 'topSelling',
     type: 'document',
     title: 'TopSelling',
@@ -31,4 +31,4 @@ export default {
       },
     ],
   };
-  
+  export default topSelling

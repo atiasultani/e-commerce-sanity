@@ -1,5 +1,5 @@
 
-export default {
+const product={
     name: 'product',
     type: 'document',
     title: 'Product',
@@ -18,4 +18,4 @@ export default {
     title: 'Image',
     options:{hotspot:true}
 }]};
-  
+  export default product

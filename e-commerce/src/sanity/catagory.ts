@@ -1,6 +1,6 @@
 import { defineField, defineType } from "sanity";
 
-export default defineType({
+const catagory= defineType({
   name: "category", // Fixed the typo from "catogry" to "category"
   type: "document",
   title: "Category",
@@ -17,3 +17,4 @@ export default defineType({
     }),
   ],
 });
+export default catagory 
